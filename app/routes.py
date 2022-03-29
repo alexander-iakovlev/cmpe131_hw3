@@ -1,4 +1,4 @@
-from app import myapp_obj
+from app import myobj
 from flask import render_template, flash
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
@@ -8,7 +8,7 @@ class cityForm(FlaskForm):
     city = StringField('City Name', validators=[DataRequired()])
     submit = SubmitField('Submit')
 
-@myapp_obj.route("/", methods=('GET', 'POST'))
+@myobj.route("/", methods=('GET', 'POST'))
 def home():
     form = cityForm()
     name = "Lisa"
