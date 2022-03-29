@@ -11,8 +11,8 @@ class cityForm(FlaskForm):
 @myobj.route("/", methods=('GET', 'POST'))
 
 form = cityForm()
-    name = "Lisa"
-    city_names = ["Paris", "London", "Rome", "Tahiti"]
+name = "Lisa"
+city_names = ["Paris", "London", "Rome", "Tahiti"]
 
 def home():
     if form.validate_on_submit ():
