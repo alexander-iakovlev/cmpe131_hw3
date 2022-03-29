@@ -7,12 +7,11 @@ from wtforms.validators import DataRequired
 class cityForm(FlaskForm):
     city = StringField('City Name', validators=[DataRequired()])
     submit = SubmitField('Submit')
-
-@myobj.route("/", methods=('GET', 'POST'))
-
+    
 name = "Lisa"
 city_names = ["Paris", "London", "Rome", "Tahiti"]
 
+@myobj.route("/", methods=('GET', 'POST'))
 def home():
     form = cityForm()
     if form.validate_on_submit ():
