@@ -9,10 +9,12 @@ class cityForm(FlaskForm):
     submit = SubmitField('Submit')
 
 @myobj.route("/", methods=('GET', 'POST'))
-def home():
-    form = cityForm()
+
+form = cityForm()
     name = "Lisa"
     city_names = ["Paris", "London", "Rome", "Tahiti"]
+
+def home():
     if form.validate_on_submit ():
         flash("{}" .format(form.city.data))
         #return render_template('home.html', name=name, city_names=city_names, form=form)
